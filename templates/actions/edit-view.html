@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block 1 %}
+<h1>Edit team member</h1>
+<h4 style="text-align: center; color: gray;">Edit contact info, location and role.</h4>
+
+
+<form action='.' method="POST">
+    {% csrf_token %}
+    <h4 style="margin: auto; text-align: center;">Info</h4>
+        <div style="margin: 25px; text-align: center;">
+            {{ form.first_name.label_tag }}
+            {{form.first_name}}
+        </div>
+        <div style="margin: 25px; text-align: center;">
+            {{ form.last_name.label_tag }}
+            {{form.last_name}}
+        </div>
+        <div style="margin: 25px; text-align: center;">
+            {{ form.email.label_tag }}
+            {{form.email}}
+        </div>
+        <div style="margin: 25px; text-align: center;">
+            {{ form.phone_num.label_tag }}
+            {{form.phone_num}}
+        </div>
+        
+    <h4 style="margin: 25px; text-align: center;">Role</h4>
+    <div style="margin: 25px; text-align: center;">
+        {{ form.role.label_tag }}
+        {{form.role}}
+    </div>
+    <div id="button_holder" style="text-align: center;">
+        <button name="delete_button" style="text-align: center;"type="submit" src="/">Delete</button>
+        <button name="edit_button" style="text-align: center;"type="submit" src="/">Save</button>
+    </div>
+</form> 
+
+
+
+{% endblock 1 %}

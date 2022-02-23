@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block 1 %}
+
+<h1 style="text-align: center;">Add a team member</h1>
+<h4 style="text-align: center; color: gray;">Set email, location and role.</h4>
+<form action='.' method="POST">
+    {% csrf_token %}
+    <h4 style="margin: auto; text-align: center;">Info</h4>
+        <div style="margin: 25px; text-align: center;">
+            <!-- {{ form.first_name.errors }} -->
+            {{ form.first_name.label_tag }}
+            {{form.first_name}}
+        </div>
+        <div style="margin: 25px; text-align: center;">
+            {{ form.last_name.label_tag }}
+            {{form.last_name}}
+        </div>
+        <div style="margin: 25px; text-align: center;">
+            {{ form.email.label_tag }}
+            {{form.email}}
+        </div>
+        <div style="margin: 25px; text-align: center;">
+            {{ form.phone_num.label_tag }}
+            {{form.phone_num}}
+        </div>
+        
+    <h4 style="margin: 25px; text-align: center;">Role</h4>
+    <div style="margin: 25px; text-align: center;">
+        {{ form.role.label_tag }}
+        {{form.role}}
+    </div>
+    <!-- 
+    <div><input type='text' name='first_name' placeholder="first name"></div>
+    <div><textarea name='last_name' placeholder="last name"></textarea></div>
+    <div><input type='text' name='email' placeholder="email"></div>
+    <div><input type='text' name='phone_num' placeholder="phone number"></div>
+    
+    <div><input type='text' name='role' placeholder="role"></div> -->
+    
+    <!-- {{form.as_p}} -->
+    <div id="button_holder" style="text-align: center;">
+        <button style="text-align: center;"type="submit" src="/">Save</button>
+    </div>
+    
+</form> 
+{% endblock 1 %}
