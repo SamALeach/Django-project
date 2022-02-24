@@ -17,3 +17,5 @@ This app has three major functionalities
 1. Team members page which displays all current members of the site
 2. Add members page which can be accessed by clicking the plus button at the top right, this page gives you a form where you can add another user to your team
 3. Edit members page which can be accessed by clicking on any users name on the team members page, this page gives you a form which after completion can be used to either edit a users information or delete them from the database
+
+If you run the command "python manage.py test" then the tests.py file in the Users folder will run several tests to emulate the operations performed in the above pages. 
