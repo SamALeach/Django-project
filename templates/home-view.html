@@ -7,10 +7,10 @@
         {% if x.first_name %}
         <a href="/edit/{{x.id}}" style="color: black; text-decoration: none;">
             <hr style="height:2px; border-width:0; color:grey; background-color:grey">
-                <p>{% load static%} <img src="{% static "photo.png" %}" /></p>
+                <p>{%load static%} <img src="{% static "photo.png" %}" /></p>
             <div style="margin: auto; text-align: center;">
                 <p>{{x.first_name}} {{x.last_name}} {{x.role}}</p>
-                <p>{{x.phone_num}}</p>
+                <p>{{x.phone_number}}</p>
                 <p>{{x.email}}</p>
             </div>   
         </a>      

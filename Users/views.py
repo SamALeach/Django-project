@@ -36,10 +36,10 @@ def user_edit_view(request, id=None):
             new_fname = request.POST['first_name']
             new_lname = request.POST['last_name']
             new_email = request.POST['email']
-            new_phonenum = request.POST['phone_num']
+            new_phonenum = request.POST['phone_number']
             new_role = request.POST['role']
             User.objects.filter(id=id).update(first_name=new_fname, last_name=new_lname, email=new_email, 
-            phone_num=new_phonenum, role=new_role) #updates selected user with new data
+            phone_number=new_phonenum, role=new_role) #updates selected user with new data
 
             #adds list of all users to context to fill home page and redirects there
             user_qset = User.objects.all()
