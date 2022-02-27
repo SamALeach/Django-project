@@ -5,6 +5,7 @@
 Building instructions
 After cloning this repository to your local machine enter the following commands
 
+1. If you do not have django installed then enter "pip install "Django==4.0.2""
 1. "python3 -m venv ." creates the python virutal environment that you will run the server in
 2. "source bin/activate" activates the virtual environment
 3. "pip install -r requirements.txt" installs all of the necessary dependencies to run the project
